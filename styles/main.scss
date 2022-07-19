@@ -1,0 +1,122 @@
+// Variables
+
+$font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+$font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+$font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+$font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+$font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+$font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+$font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+
+// Fonts Install
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+
+
+//Reset
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+// Header
+
+header {
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 20px 20px 0 20px;
+    font-size: $font-size-base;
+}
+
+.logo--container {
+    img {
+        width: 90px;
+    }
+}
+
+.nav-items-container {
+    display: flex;
+    flex-direction: row;
+
+    li {
+        padding-left: 2vw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .nav-items-container {
+        display: none;
+    }
+}
+
+// Menu Mobile 
+
+.toggle--menu {
+    display: none;
+}
+
+.closeBtn {
+    display: none;
+}
+
+.menu--mobile {
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0; left: 0;
+    color: white;
+}
+
+
+@media screen and (max-width: 950px) {
+    .toggle--menu {
+        display: flex;
+    }
+}
+
+// Banner 
+
+.banner--container {
+    position: absolute;
+    width: 100%;
+    height: 95vh;
+    z-index: 1;
+}
+
+.banner {
+    position: relative;
+    height: 100%;
+    background-image: url(/assets/img/home/bg-img.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner--txt {
+    position: absolute;
+    top: 40%; left: 0;
+    z-index: 10;
+    color: white;
+    margin-left: 2rem;
+    font-size: $font-size-xxxl;
+    font-weight: 600;
+}

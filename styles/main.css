@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 20px 20px 0 20px;
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+}
+
+.logo--container img {
+  width: 90px;
+}
+
+.nav-items-container {
+  display: flex;
+  flex-direction: row;
+}
+.nav-items-container li {
+  padding-left: 2vw;
+}
+
+@media screen and (max-width: 950px) {
+  .nav-items-container {
+    display: none;
+  }
+}
+.toggle--menu {
+  display: none;
+}
+
+.closeBtn {
+  display: none;
+}
+
+.menu--mobile {
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+@media screen and (max-width: 950px) {
+  .toggle--menu {
+    display: flex;
+  }
+}
+.banner--container {
+  position: absolute;
+  width: 100%;
+  height: 95vh;
+  z-index: 1;
+}
+
+.banner {
+  position: relative;
+  height: 100%;
+  background-image: url(/assets/img/home/bg-img.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner--txt {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 10;
+  color: white;
+  margin-left: 2rem;
+  font-size: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */
