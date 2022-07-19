@@ -1,0 +1,54 @@
+@import 'main.scss';
+
+
+.shop--container {
+    margin: 5vw;
+}
+
+.ttle-s {
+    font-size: $font-size-xl;
+    font-weight: 700;
+}
+
+.product--info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5vw;
+}
+
+.product-img {
+    width: 50%;
+    height: 100vh;
+    background-image: url(../assets/img/shop/electrics/nile_rodergs_strat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.info-txt {
+    padding-left: 5vw;
+    width: 50%;
+    text-align: left;
+    .info-ttle{
+        font-size: $font-size-xl;
+    }
+    p{
+        font-size: $font-size-lg;
+        margin-top: 2vw;
+        width: 80%;
+        font-weight: 300;
+    }
+}
+
+.btn-vm {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    cursor: pointer;
+    a {
+        padding-right: 1vw;
+        transform: translateY(20%);
+    }
+    p {
+        text-decoration: underline;
+    }
+}

@@ -109,4 +109,56 @@ a:hover {
   font-size: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
   font-family: "Epilogue", sans-serif;
   font-weight: 600;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.shop--container {
+  margin: 5vw;
+}
+
+.ttle-s {
+  font-size: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  font-weight: 700;
+}
+
+.product--info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2.5vw;
+}
+
+.product-img {
+  width: 50%;
+  height: 100vh;
+  background-image: url(../assets/img/shop/electrics/nile_rodergs_strat.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.info-txt {
+  padding-left: 5vw;
+  width: 50%;
+  text-align: left;
+}
+.info-txt .info-ttle {
+  font-size: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+}
+.info-txt p {
+  font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  margin-top: 2vw;
+  width: 80%;
+  font-weight: 300;
+}
+
+.btn-vm {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  cursor: pointer;
+}
+.btn-vm a {
+  padding-right: 1vw;
+  transform: translateY(20%);
+}
+.btn-vm p {
+  text-decoration: underline;
+}/*# sourceMappingURL=shop.css.map */

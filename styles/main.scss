@@ -10,7 +10,7 @@ $font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
 // Fonts Install
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 //Reset
@@ -19,8 +19,7 @@ $font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
+    font-family: 'Epilogue', sans-serif;
 }
 
 a, a:hover, a:focus, a:active {
@@ -35,11 +34,11 @@ li {
 // Header
 
 header {
-    height: 5vh;
+    height: 6vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     margin: 20px 20px 0 20px;
     font-size: $font-size-base;
 }
@@ -59,6 +58,19 @@ header {
     }
 }
 
+a {
+    opacity: 1;
+}
+
+.menu-items {
+    text-align: left;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
 @media screen and (max-width: 950px) {
     .nav-items-container {
         display: none;
@@ -75,22 +87,24 @@ header {
     display: none;
 }
 
-.menu--mobile {
-    display: flex;
-    flex-direction: column;
-    z-index: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    position: absolute;
-    top: 0; left: 0;
-    color: white;
+.menu--mobile--container {
+    display: none;
 }
 
+.menu--mobile {
+    z-index: 998;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0; left: 0;
+    color: black;
+    transition: opacity 2s;
+}
 
 @media screen and (max-width: 950px) {
     .toggle--menu {
         display: flex;
+        z-index: 999;
     }
 }
 
@@ -118,5 +132,6 @@ header {
     color: white;
     margin-left: 2rem;
     font-size: $font-size-xxxl;
+    font-family: 'Epilogue', sans-serif;
     font-weight: 600;
 }
