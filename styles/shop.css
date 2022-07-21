@@ -16,13 +16,25 @@ li {
 }
 
 header {
-  height: 6vh;
+  width: 100%;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 20px 0 20px;
+  margin: 0;
+  padding: 20px 20px 0 20px;
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: solid 1px black;
+}
+
+nav {
+  display: flex;
 }
 
 .logo--container img {
@@ -32,6 +44,7 @@ header {
 .nav-items-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .nav-items-container li {
   padding-left: 2vw;
@@ -111,6 +124,63 @@ a:hover {
   font-weight: 600;
 }
 
+footer {
+  padding: 20px;
+  border-top: solid black 1px;
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+}
+footer nav {
+  width: 100%;
+}
+footer nav .footer-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+footer nav .footer-nav ul p {
+  font-weight: 600;
+  margin-bottom: 1vw;
+  border-top: solid 1 px black;
+}
+footer nav .footer-nav ul li {
+  padding-bottom: 0.5vw;
+  cursor: pointer;
+}
+
+.signature {
+  margin-top: 1vw;
+  font-size: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  font-style: italic;
+  font-weight: 300;
+}
+.signature p {
+  padding-bottom: 0.5vw;
+}
+
+@media screen and (max-width: 950px) {
+  footer .logo--container {
+    margin-bottom: 6vw;
+  }
+}
+.cart-menu {
+  display: none;
+  justify-content: flex-end;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.cart-menu img {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  transform: translateX(-50%);
+}
+
 .shop--container {
   margin: 5vw;
 }
@@ -124,14 +194,16 @@ a:hover {
   display: flex;
   flex-direction: row;
   margin-top: 2.5vw;
+  height: 100vh;
 }
 
 .product-img {
   width: 50%;
-  height: 100vh;
+  height: auto;
   background-image: url(../assets/img/shop/electrics/nile_rodergs_strat.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .info-txt {
@@ -161,4 +233,80 @@ a:hover {
 }
 .btn-vm p {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+  .info-txt p {
+    width: 100%;
+  }
+}
+.shop .ttle-s {
+  margin-top: 2.5vw;
+  margin-bottom: 2.5vw;
+}
+
+.shop--page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-container {
+  width: 33.33%;
+  margin-top: 7vw;
+}
+.product-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-container .img-container img {
+  width: 240px;
+  height: auto;
+}
+.product-container .product-info {
+  margin-top: 2vw;
+  width: 100%;
+}
+.product-container .product-info .ttle-product {
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+}
+.product-container .product-info .price {
+  margin-top: 0.5vw;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 950px) {
+  .product-container {
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .product--info {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 950px) {
+  .product-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .product--info {
+    flex-direction: column;
+    margin-bottom: 5vw;
+  }
+  .info-txt {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 5vw;
+  }
+  .product-img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
 }/*# sourceMappingURL=shop.css.map */

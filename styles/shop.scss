@@ -14,14 +14,16 @@
     display: flex;
     flex-direction: row;
     margin-top: 2.5vw;
+    height: 100vh;
 }
 
 .product-img {
     width: 50%;
-    height: 100vh;
+    height: auto;
     background-image: url(../assets/img/shop/electrics/nile_rodergs_strat.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .info-txt {
@@ -50,5 +52,90 @@
     }
     p {
         text-decoration: underline;
+    }
+}
+
+// Section New Responsive
+
+@media screen and (max-width: 1000px) {
+    .info-txt p {
+        width: 100%;
+    }
+}
+
+// Products
+
+.shop .ttle-s {
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+}
+
+.shop--page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-container {
+    width: 33.33%;
+    margin-top: 7vw;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-container img {
+        width: 240px;
+        height: auto;
+    }
+    .product-info {
+        margin-top: 2vw;
+        width: 100%;
+        .ttle-product {
+            font-size: $font-size-base;
+        }
+        .price {
+            margin-top: .5vw;
+            font-weight: 600;
+        }
+    }
+}
+
+// Shop Responsive
+
+@media screen and (max-width: 950px) {
+    .product-container {
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .product--info {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .product-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .product--info {
+        flex-direction: column;
+        margin-bottom: 5vw;
+    }
+    .info-txt {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 5vw;
+    }
+    .product-img {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
     }
 }
