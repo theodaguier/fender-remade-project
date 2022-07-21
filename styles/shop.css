@@ -73,6 +73,10 @@ a:hover {
   color: black;
 }
 
+.menu-items .active {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 950px) {
   .nav-items-container {
     display: none;
@@ -233,10 +237,12 @@ footer nav .footer-nav ul li {
 .product-img {
   width: 50%;
   height: auto;
-  background-image: url(../assets/img/shop/electrics/nile_rodergs_strat.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+.product-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .info-txt {
@@ -334,6 +340,7 @@ footer nav .footer-nav ul li {
   .product--info {
     flex-direction: column;
     margin-bottom: 5vw;
+    height: 100%;
   }
   .info-txt {
     width: 100%;
