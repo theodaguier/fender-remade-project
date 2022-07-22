@@ -90,22 +90,27 @@ a:hover {
   display: none;
 }
 
-.menu--mobile {
+.menu--mobile--container {
+  width: 100%;
+  height: 100vh;
+}
+.menu--mobile--container .menu--mobile {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 50px;
   z-index: 998;
   width: 100%;
   height: 100vh;
-  position: relative;
+  margin-left: 0;
+  position: fixed;
   top: 0;
   left: 0;
   color: black;
   font-size: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+  background-color: white;
 }
-.menu--mobile li {
+.menu--mobile--container .menu--mobile li {
   padding-bottom: 50px;
 }
 

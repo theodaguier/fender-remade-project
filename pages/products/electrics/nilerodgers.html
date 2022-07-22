@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="../../../styles/shop.css">
     <link rel="stylesheet" href="../../../styles/product.css">
+    <link rel="stylesheet" href="../../../styles/locomotive-scroll.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
     
-    <div class="container">
+    <div class="container" data-scroll-container>
         
         <!-- Cart Menu -->
         <div class="cart-menu noactive">
@@ -99,7 +102,7 @@
                     
                 </div>
                 
-                <div class="info-prd-container">
+                <div class="info-prd-container custom-s">
                     <div class="features">
                         <div class="features-ttle">Features</div>
                         <span class="txt-space"></span>
@@ -186,17 +189,29 @@
         </footer>
 
     </div>
-
-
+    
     <script src="../../../app.js"></script>
     <script src="../../../javascript/shopping-cart.js"></script>
     <script src="../../../javascript/shop.js"></script>
     <script src="../../../javascript/carousel.js"></script>
+    <script src="../../../javascript/gsap-anim.js"></script>
 
     <!-- Swup Install -->
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <script>
         const swup = new Swup();
+    </script>
+
+    <!-- Locomotive Scroll -->
+    <script src="../../../javascript/locomotive-scroll-min.js"></script>
+    <script>
+        (function () {
+            var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                multiplier: 1
+            });
+        })();
     </script>
 </body>
 </html>

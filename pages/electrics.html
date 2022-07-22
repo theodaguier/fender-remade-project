@@ -7,10 +7,13 @@
     <title>Electrics</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/shop.css">
+    <link rel="stylesheet" href="../styles/locomotive-scroll.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
     
-    <div class="container">
+    <div class="container" data-scroll-container>
         
         <!-- Cart Menu -->
         <div class="cart-menu noactive">
@@ -71,8 +74,10 @@
                                 Stratocaster® Nile bought in a Miami music shop. 
                                 Rarely is a single guitar so inseparably identified with its owner as The Hitmaker.</p>
                             <div class="btn-vm">
-                                <a href=""><img src="https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/48/000000/external-arrow-arrow-line-royyan-wijaya-detailed-outline-royyan-wijaya-12.png"/></a>
-                                <p>View More</p>
+                                <a href="products/electrics/nilerodgers.html">
+                                    <img src="https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/48/000000/external-arrow-arrow-line-royyan-wijaya-detailed-outline-royyan-wijaya-12.png"/>
+                                    <p>View More</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -82,7 +87,18 @@
                     <div class="shop--page">
 
                         <div class="product-container">
-                            <a href="products/electrics/screamadelica.html">
+                            <a href="products/electrics/nilerodgers.html">
+                                <div class="img-container">
+                                    <img src="../assets/img/shop/electrics/fen_ins_1.jpeg" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <p class="ttle-product">Nile Rodgers Hitmaker Stratocaster®</p>
+                                    <p class="price">2,899.00 €</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-container">
+                            <a href="products/electrics/nilerodgers.html">
                                 <div class="img-container">
                                     <img src="../assets/img/shop/electrics/fen_ins_3.jpeg" alt="">
                                 </div>
@@ -100,17 +116,6 @@
                                 <div class="product-info">
                                     <p class="ttle-product">Player Plus Stratocaster®</p>
                                     <p class="price">1,049.00 €</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="img-container">
-                                    <img src="../assets/img/shop/electrics/fen_ins_1.jpeg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="ttle-product">Nile Rodgers Hitmaker Stratocaster®</p>
-                                    <p class="price">2,899.00 €</p>
                                 </div>
                             </a>
                         </div>
@@ -197,11 +202,24 @@
     <script src="../app.js"></script>
     <script src="../javascript/shopping-cart.js"></script>
     <script src="../javascript/shop.js"></script>
+    <script src="../javascript/gsap-anim.js"></script>
 
     <!-- Swup Install -->
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <script>
         const swup = new Swup();
+    </script>
+
+    <!-- Locomotive Scroll -->
+    <script src="../javascript/locomotive-scroll-min.js"></script>
+    <script>
+        (function () {
+            var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                multiplier: 1
+            });
+        })();
     </script>
 </body>
 </html>

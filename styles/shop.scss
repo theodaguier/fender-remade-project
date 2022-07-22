@@ -42,10 +42,10 @@
     }
 }
 
-.btn-vm {
+.btn-vm a {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: flex-end;
     cursor: pointer;
     a {
         padding-right: 1vw;

@@ -256,17 +256,17 @@ footer nav .footer-nav ul li {
   font-weight: 300;
 }
 
-.btn-vm {
+.btn-vm a {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: flex-end;
   cursor: pointer;
 }
-.btn-vm a {
+.btn-vm a a {
   padding-right: 1vw;
   transform: translateY(20%);
 }
-.btn-vm p {
+.btn-vm a p {
   text-decoration: underline;
 }
 

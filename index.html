@@ -7,10 +7,11 @@
     <title>Home</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="styles/locomotive-scroll.css">
 </head>
 <body>
     
-    <div class="container">
+    <div class="container" data-scroll-container>
         
         <header>
             <div class="logo--container">
@@ -100,6 +101,18 @@
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <script>
         const swup = new Swup();
+    </script>
+
+    <!-- Locomotive Scroll -->
+    <script src="javascript/locomotive-scroll-min.js"></script>
+    <script>
+        (function () {
+            var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                multiplier: 2.5
+            });
+        })();
     </script>
 </body>
 </html>

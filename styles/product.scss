@@ -103,6 +103,9 @@
     .product-p-container .product-p-des {
         width: 100%;
     }
+    .product-p-container .product-p-des {
+        margin-left: 0;
+    }
 }
 
 .info-prd-container {
@@ -118,32 +121,11 @@
 
 // Carousel
 
-.carousel-controler {
-    font-size: 50px;
-    cursor: pointer;
-    .precedent{
-        position: absolute;
-        top: 60%; left: 0;
-        z-index: 99;
-    }
-    .suivant {
-        position: absolute;
-        top: 60%; left: 100%;
-        z-index: 99;
-    }
-    .suivant.anim {
-        opacity: 1;
-    }
-    
-    .precedent.anim {
-        opacity: 1;
-    }
-}
-
 .carousel {
     display: flex;
     height: 60vh;
     position: relative;
+    margin-top: 5vw;
     img{
         object-fit: contain;
         width: 100%;
@@ -159,5 +141,33 @@
     }
     .active {
         opacity: 1;
+    }
+}
+
+.carousel-controler {
+    font-size: 40px;
+    cursor: pointer;
+    .precedent{
+        position: absolute;
+        top: 60%; left: 0;
+        z-index: 99;
+    }
+    .suivant {
+        position: absolute;
+        top: 60%; left: 95%;
+        z-index: 99;
+    }
+    .suivant.anim {
+        opacity: 1;
+    }
+    
+    .precedent.anim {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .carousel-controler {
+        font-size: 30px;
     }
 }
